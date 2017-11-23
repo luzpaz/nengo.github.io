@@ -1,0 +1,350 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>How to Build a Brain &#8212; Nengo 2017-11-23 documentation</title>
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2017-11-23',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using the book as a text" href="textbook.html" />
+    <link rel="prev" title="Nengo projects" href="../projects.html" />
+<link rel="stylesheet" type="text/css" href="../_static/custom.css">
+
+
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="textbook.html" title="Using the book as a text"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../projects.html" title="Nengo projects"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Nengo 2017-11-23 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    ../index.html" class="text-logo">Nengo</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Nengo projects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Build a Brain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="textbook.html">Using the book as a text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supplementary.html">Supplementary materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-semantic-pointer-architecture-spa">The Semantic Pointer Architecture (SPA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#an-example">An example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#book-reviews">Book reviews</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../summerschool.html">2018 Nengo Summer School</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forum.nengo.ai">Forum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers.html">Developer guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About this website</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Docs</a></li>
+              
+              <li>How to Build a Brain</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="how-to-build-a-brain">
+<h1>How to Build a Brain<a class="headerlink" href="#how-to-build-a-brain" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.amazon.com/How-Build-Brain-Architecture-Architectures/DP/0199794545"><img alt="bookcover" class="float-right" src="../_images/htbab-cover.png" style="width: 180px;" /></a>
+The book <a class="reference external" href="http://www.amazon.com/How-Build-Brain-Architecture-Architectures/DP/0199794545">How to Build a Brain</a>
+from Oxford University Press came out in May 2013.
+It exploits the <a class="reference external" href="http://compneuro.uwaterloo.ca/research/nef.html">Neural Engineering Framework (NEF)</a>
+to develop the Semantic Pointer Architecture (SPA) for cognitive modelling.
+The book uses Nengo to explain and demonstrate
+many of the central concepts for these frameworks.
+This section of the website supports the book by providing
+links to models, demos, videos, and tutorials mentioned in the book.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference external" href="https://github.com/nengo/nengo_spa">The Nengo SPA project</a>.</li>
+<li><a class="reference external" href="https://xchoo.github.io/spaun2.0">Spaun documentation</a>.</li>
+<li><a class="reference external" href="https://github.com/nengo/nengo_examples/tree/master/htbab_tutorials">Book tutorials updated for Nengo 2.0</a>.</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="textbook.html">Using the book as a text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supplementary.html">Supplementary materials</a></li>
+</ul>
+</div>
+<div class="section" id="the-semantic-pointer-architecture-spa">
+<h2>The Semantic Pointer Architecture (SPA)<a class="headerlink" href="#the-semantic-pointer-architecture-spa" title="Permalink to this headline">¶</a></h2>
+<p>Briefly, the semantic pointer hypothesis states:</p>
+<blockquote>
+<div>Higher-level cognitive functions in biological systems
+are made possible by semantic pointers.
+Semantic pointers are neural representations
+that carry partial semantic content
+and are composable into the representational structures
+necessary to support complex cognition.</div></blockquote>
+<p>The term ‘semantic pointer’ was chosen
+because the representations in the architecture
+are like ‘pointers’ in computer science
+(insofar as they can be ‘dereferenced’
+to access large amounts of information
+which they do not directly carry).
+However, they are ‘semantic’
+(unlike pointers in computer science)
+because these representations capture relations
+in a semantic vector space
+in virtue of their distances to one another,
+as typically envisaged by connectionists.</p>
+<p>The four main topics in the book
+that are used to describe the architecture
+are semantics, syntax, control, and learning and memory.
+The discussion of semantics considers
+how semantic pointers are generated from information
+that impinges on the senses,
+reproducing details of
+the spiking tuning curves in the visual system.
+Syntax is captured by demonstrating
+how very large structures can be encoded,
+by binding semantic pointers to one another.
+The section on control considers
+the role of the basal ganglia
+and other structures in routing information
+throughout the brain to control cognitive tasks.
+The section on learning memory describes
+how the SPA includes adaptability
+(despite this not being a focus of the <a class="reference external" href="http://compneuro.uwaterloo.ca/research/nef.html">NEF</a>)
+showing how detailed spiking timing during learning
+can be incorporated into the basal ganglia model
+using a biologically plausible STDP-like rule.</p>
+</div>
+<div class="section" id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
+<p>In chapter 7 of the book,
+the SPA Unified Network (Spaun) model is presented
+that demonstrates how
+a wide variety of (about 8) cognitive and non-cognitive tasks
+can be integrated in a single large-scale, spiking neuron model.
+Spaun switches tasks and provides all responses
+without any manual change in parameters from a programmer.
+Essentially, it is a fixed model
+that integrates perception, cognition, and action
+across several different tasks
+(many of which are described elsewhere on this site).
+Spaun is the most complex example
+of an SPA model to date (see figure 1).</p>
+<div class="figure align-center" id="id1">
+<img alt="../_images/spaun-1.png" src="../_images/spaun-1.png" />
+<p class="caption"><span class="caption-text">Figure 1: A high-level depiction of the Spaun model,
+with all of the central features
+of a general Semantic Pointer Architecture.
+Visual and motor hierarchies provide semantics
+via connections to natural input (images)
+and output (a nonlinear dynamical arm model).
+Central information manipulation
+depends on syntactic structure for several tasks.
+Control is largely captured by
+the basal ganglia action selection elements.
+Memory and learning take place in both basal ganglia and cortex.
+The model itself consists of just under a million spiking neurons.</span></p>
+</div>
+<p>Let us consider how the model would run
+on one run of one cognitive task
+(<a class="reference external" href="https://xchoo.github.io/spaun2.0/videos.html">see a video of Spaun performing this task</a>).
+This task is analogous to the
+<a class="reference external" href="http://en.wikipedia.org/wiki/Raven's_Progressive_Matrices">Raven’s Matrix task</a>,
+which requires people to figure out a pattern in the input,
+and apply that pattern to new input to produce novel output.
+For instance given the following input
+“[1] [11] [111] [2] [22] [222] [3] [33] ?”
+the expected answer is 333.
+The input to the model first indicates
+which task it is going to perform
+by presenting it with an ‘A’
+followed by the task number (e.g. ‘A 7’ for this task).
+Then it is shown a series of letters and brackets
+and it has to draw the correct answer with its arm.
+The processing for such a task goes something like this:</p>
+<ol class="arabic simple">
+<li>The image impacts the visual system,
+and the neurons transform the raw image input (784 dimensions)
+to a lower dimensional (50 dimensions) semantic pointer
+that preserves central visual features.
+This is done using a visual hierarchy model (i.e., V1-V2-V4-IT)
+that implements a learned statistical compression.</li>
+<li>The visual semantic pointer is mapped to a conceptual semantic pointer
+by an associative memory, and stored in a working memory.
+Storing semantic pointers is performed by
+binding them to other semantic pointers
+that are used to encode the order the information is presented in
+(e.g. to distinguish 1 2 from 2 1).</li>
+<li>In this task, the semantic pointers
+generated by consecutive sets of inputs
+are compared with each other
+to infer what relationship there exists
+(e.g. between 1 and 11; or 22 and 222).</li>
+<li>The shared transformation across all the input
+is determined by averaging the previously inferred relationships
+across all sets of inputs
+(so the inferred relationship between 1 and 11 is averaged
+with that between 22 and 222, and so on).</li>
+<li>When the ‘?’ is encountered,
+Spaun determines its answer by
+taking the average relationship
+and applying it to the last input (i.e., 33)
+to generate an internal representation of the answer.</li>
+<li>This representation is then used to drive the motor system
+to write out the correct answer (see figure 2b),
+by sending the relevant semantic pointers to the motor system.</li>
+<li>The motor system ‘dereferences’ the semantic pointer
+by going down the motor hierarchy
+to generate appropriate control signals
+for a high-degree of freedom physical arm model.</li>
+</ol>
+<div class="figure align-center" id="id2">
+<img alt="../_images/spaun-2.png" src="../_images/spaun-2.png" />
+<p class="caption"><span class="caption-text">Figure 2: Example input and output from Spaun.
+a) Handwritten numbers used as input.
+b) Numbers drawn by Spaun using its arm.</span></p>
+</div>
+<p>All of the control-like steps
+(e.g. ‘compared with’, ‘inferred’, and routing information through the system)
+are implemented by a biologically plausible basal ganglia model.
+This is one example of the 8 different tasks that Spaun is able to perform.
+Videos for all tasks can be found <a class="reference external" href="https://xchoo.github.io/spaun2.0/videos.html">here</a>.</p>
+</div>
+<div class="section" id="book-reviews">
+<h2>Book reviews<a class="headerlink" href="#book-reviews" title="Permalink to this headline">¶</a></h2>
+<p>Here is a list of reviews we’ve found
+that talk about the book
+(please post any other reviews you find
+<a class="reference external" href="https://forum.nengo.ai/">on the forum</a>
+and we’ll add them here):</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.psychologytoday.com/blog/hot-thought/201306/the-new-synthesis-in-cognitive-science">Hot Thought</a>
+Psychology Today blog by Paul Thagard</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="../projects.html" title="previous chapter (use the left arrow)">Nengo projects</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="textbook.html" title="next chapter (use the right arrow)">Using the book as a text</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="textbook.html" title="Using the book as a text"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../projects.html" title="Nengo projects"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Nengo 2017-11-23 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2016, Applied Brain Research. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

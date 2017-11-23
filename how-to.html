@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Making Nengo contributions &#8212; Nengo 2017-11-23 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2017-11-23',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Style guide" href="style.html" />
+    <link rel="prev" title="Nengo Code of Conduct" href="conduct.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="style.html" title="Style guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="conduct.html" title="Nengo Code of Conduct"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Nengo 2017-11-23 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >Developer guide</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="contributing.html" accesskey="U">Contributor guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    index.html" class="text-logo">Nengo</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Nengo projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-a-brain/index.html">How to Build a Brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summerschool.html">2018 Nengo Summer School</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forum.nengo.ai">Forum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">Developer guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="governance.html">Governance</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="contributing.html">Contributor guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewing.html">Reviewer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintaining.html">Maintainer guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">About this website</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+                <li><a href="developers.html">Developer guide</a></li>
+              
+                <li><a href="contributing.html">Contributor guide</a></li>
+              
+              <li>Making Nengo contributions</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="making-nengo-contributions">
+<h1>Making Nengo contributions<a class="headerlink" href="#making-nengo-contributions" title="Permalink to this headline">¶</a></h1>
+<p>We welcome all sorts of contributions!
+The list below is by no means exhaustive.</p>
+<ul class="simple">
+<li><strong>Create</strong>: Use Nengo to make a model
+and share it with the community.</li>
+<li><strong>Report bugs</strong>: Let us know if Nengo crashes
+or does something that you don’t expect.</li>
+<li><strong>Develop</strong>: Add or modify some code
+in a <a class="reference internal" href="projects.html#nengo-projects"><span class="std std-ref">Nengo project</span></a>.</li>
+<li><strong>Document</strong>: Teach others how to use Nengo
+by adding to or clarifying our documentation.</li>
+</ul>
+<div class="section" id="sharing-your-creations">
+<h2>Sharing your creations<a class="headerlink" href="#sharing-your-creations" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways to
+share your Nengo creations
+with the community.
+The quickest way is to make a post on the forum.</p>
+<ol class="arabic simple">
+<li>Head to <a class="reference external" href="https://forum.nengo.ai/c/examples-tutorials">the examples category of the forum</a>.</li>
+<li>If you don’t yet have an account,
+click the “Sign Up” button at the top-right of the page.</li>
+<li>Click on the “New Topic” button at the top-right.</li>
+<li>Write your post with the editor that pops up.
+Format your post with
+<a class="reference external" href="http://commonmark.org/help/">Markdown</a> – make
+sure you format code blocks so they’re easier to read!</li>
+</ol>
+<p>If your creation is too big for a forum post,
+consider making a pull request on the
+<a class="reference external" href="https://github.com/nengo/nengo_examples">the examples repository</a>.</p>
+<p>If your creation is already available online
+(in Github, for example)
+then consider making a pull request adding to the
+<a class="reference external" href="https://github.com/nengo/nengo.github.io/blob/src/projects.rst">list of Nengo projects</a>.</p>
+</div>
+<div class="section" id="reporting-bugs-and-suggesting-features">
+<h2>Reporting bugs and suggesting features<a class="headerlink" href="#reporting-bugs-and-suggesting-features" title="Permalink to this headline">¶</a></h2>
+<p>If you find any bugs in any Nengo project,
+or you think a particular feature would
+fill a need that you have,
+file an issue on project’s Github repository.</p>
+<ol class="arabic simple">
+<li>Head to the project’s Github page
+(e.g., <a class="reference external" href="https://github.com/nengo/nengo_gui">nengo/nengo_gui</a>.</li>
+<li>Click the “Issues” tab at the top of the page.</li>
+<li>Click the green “New issue” button at the top-right of the page.</li>
+</ol>
+<p>Be sure to include as much detail as you can
+when filing issues,
+especially when reporting bugs.
+The first thing we do to fix bugs
+is try to reproduce them locally.
+Try to find the shortest script
+or sequence of steps
+to reproduce the bug.</p>
+</div>
+<div class="section" id="proposing-a-large-change">
+<h2>Proposing a large change<a class="headerlink" href="#proposing-a-large-change" title="Permalink to this headline">¶</a></h2>
+<p>A large change is one that requires the public API
+to change for more than one Nengo project,
+or requires significant public API changes
+for one core project.</p>
+<p>To propose a large change,
+make a pull request on the
+<a class="reference external" href="https://github.com/nengo/enhancement_proposals">enhancement proposals repository</a>.
+In your pull request, copy the <a class="reference external" href="https://raw.githubusercontent.com/nengo/enhancement_proposals/master/000-template.rst">proposal template</a>
+to a new file with an appropriate title,
+and edit the file to explain
+the change you think should be made.</p>
+</div>
+<div class="section" id="making-pull-requests">
+<h2>Making pull requests<a class="headerlink" href="#making-pull-requests" title="Permalink to this headline">¶</a></h2>
+<p>Whether you’re sharing your creation,
+developing a Nengo project,
+or adding documentation,
+we manage contributions with
+<a class="reference external" href="https://help.github.com/articles/about-pull-requests/">pull requests</a>.</p>
+<ol class="arabic">
+<li><p class="first">If you are not yet a <a class="reference internal" href="people.html#people"><span class="std std-ref">contributor</span></a>,
+then start by
+<a class="reference external" href="https://help.github.com/articles/fork-a-repo/">forking the repository</a>
+you want to contribute to.
+If you are a contributor,
+then there is no need to make a fork.</p>
+</li>
+<li><p class="first">Before making any changes to the repository,
+create a new branch for your change – you
+should never edit code on the <code class="docutils literal"><span class="pre">master</span></code> branch!
+To create a branch, use the command</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">add</span><span class="o">-</span><span class="n">forum</span><span class="o">-</span><span class="n">link</span>
+</pre></div>
+</div>
+<p>Make sure to give your branch a meaningful name.
+Names like <code class="docutils literal"><span class="pre">patch</span></code> or <code class="docutils literal"><span class="pre">fix128</span></code>
+are hard to remember later on.</p>
+</li>
+<li><p class="first">Make the changes you want to make to the repository.
+If your changes are large,
+split the changes up into separate meaningful commits.</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">README</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Add forum link to README&quot;</span>
+</pre></div>
+</div>
+<p>Make sure you follow our <a class="reference internal" href="style.html#style-guide"><span class="std std-ref">style guide</span></a>,
+including the <a class="reference internal" href="style.html#git"><span class="std std-ref">commit message format</span></a>.</p>
+</li>
+<li><p class="first">Once your changes are done, push them to Github</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">add</span><span class="o">-</span><span class="n">forum</span><span class="o">-</span><span class="n">link</span>
+</pre></div>
+</div>
+<p>and <a class="reference external" href="https://help.github.com/articles/creating-a-pull-request/">make a pull request</a>.</p>
+</li>
+<li><p class="first">Your pull request will undergo at least one review.
+Keep in mind that reviewing is a process
+that can take multiple iterations.
+Keep in mind the <a class="reference internal" href="conduct.html#nengo-code-of-conduct"><span class="std std-ref">code of conduct</span></a>
+when responding to reviews.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="conduct.html" title="previous chapter (use the left arrow)">Nengo Code of Conduct</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="style.html" title="next chapter (use the right arrow)">Style guide</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="style.html" title="Style guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="conduct.html" title="Nengo Code of Conduct"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Nengo 2017-11-23 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >Developer guide</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="contributing.html" >Contributor guide</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2016, Applied Brain Research. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Nengo projects &#8212; Nengo 2017-11-23 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2017-11-23',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to Build a Brain" href="build-a-brain/index.html" />
+    <link rel="prev" title="Download" href="download.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="build-a-brain/index.html" title="How to Build a Brain"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="download.html" title="Download"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Nengo 2017-11-23 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    index.html" class="text-logo">Nengo</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Nengo projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#core-framework">Core framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualizations-and-models">Visualizations and models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation-backends">Simulation backends</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="build-a-brain/index.html">How to Build a Brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summerschool.html">2018 Nengo Summer School</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forum.nengo.ai">Forum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">Developer guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">About this website</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>Nengo projects</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="nengo-projects">
+<h1>Nengo projects<a class="headerlink" href="#nengo-projects" title="Permalink to this headline">¶</a></h1>
+<p>The Nengo ecosystem is made up of
+several interacting projects.
+The following image shows how these projects interact.
+Each arrow indicates a dependency on another project
+(e.g., the Nengo GUI depends on Nengo core).</p>
+<img alt="_images/projects.svg" src="_images/projects.svg" /><p>The Nengo ecosystem is organized this way so that
+visualizations and models only need to know about
+the Nengo core in order to be run on many different types
+of physical hardware.
+Most models can be run on a CPU, GPU, FPGA,
+and neuromorphic hardware.</p>
+<div class="section" id="core-framework">
+<h2>Core framework<a class="headerlink" href="#core-framework" title="Permalink to this headline">¶</a></h2>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong><a class="reference external" href="https://www.nengo.ai/nengo/">Nengo core</a></strong><p class="project-badges"><a class="reference external" href="https://www.nengo.ai/nengo/"><img alt="https://img.shields.io/badge/documentation--green.svg?style=social" src="https://img.shields.io/badge/documentation--green.svg?style=social" /></a><a class="reference external" href="https://github.com/nengo/nengo"><img alt="https://img.shields.io/github/stars/nengo/nengo.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo.svg?style=social&amp;label=Github" /></a><a class="reference external" href="https://pypi.python.org/pypi/nengo"><img alt="https://img.shields.io/pypi/v/nengo.svg" src="https://img.shields.io/pypi/v/nengo.svg" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:tbekolay&#37;&#52;&#48;gmail&#46;com"><span>Trevor Bekolay</span></a></p>
+</div>
+<div class="project-description docutils container">
+The core of the Nengo ecosystem is the
+Python library <code class="docutils literal"><span class="pre">nengo</span></code>,
+which includes the five Nengo objects
+(<a class="reference external" href="https://www.nengo.ai/nengo/frontend_api.html#nengo.Ensemble" title="(in Nengo v2.6)"><code class="xref py py-obj docutils literal"><span class="pre">Ensemble</span></code></a>, <a class="reference external" href="https://www.nengo.ai/nengo/frontend_api.html#nengo.Node" title="(in Nengo v2.6)"><code class="xref py py-obj docutils literal"><span class="pre">Node</span></code></a>, <a class="reference external" href="https://www.nengo.ai/nengo/frontend_api.html#nengo.Connection" title="(in Nengo v2.6)"><code class="xref py py-obj docutils literal"><span class="pre">Connection</span></code></a>,
+<a class="reference external" href="https://www.nengo.ai/nengo/frontend_api.html#nengo.Probe" title="(in Nengo v2.6)"><code class="xref py py-obj docutils literal"><span class="pre">Probe</span></code></a>, <a class="reference external" href="https://www.nengo.ai/nengo/frontend_api.html#nengo.Network" title="(in Nengo v2.6)"><code class="xref py py-obj docutils literal"><span class="pre">Network</span></code></a>)
+and a NumPy-based simulator.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong><a class="reference external" href="https://arvoelke.github.io/nengolib-docs/">Nengo Library</a></strong><p class="project-badges"><a class="reference external" href="https://arvoelke.github.io/nengolib-docs/"><img alt="https://img.shields.io/badge/documentation--green.svg?style=social" src="https://img.shields.io/badge/documentation--green.svg?style=social" /></a><a class="reference external" href="https://github.com/arvoelke/nengolib"><img alt="https://img.shields.io/github/stars/arvoelke/nengolib.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/arvoelke/nengolib.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="mailto:arvoelke&#37;&#52;&#48;gmail&#46;com"><span>Aaron Voelker</span></a></p>
+</div>
+<div class="project-description docutils container">
+Additional extensions for large-scale brain modelling with Nengo.
+Includes advanced dynamics networks,
+additional synapse models, and more.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo extras</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_extras"><img alt="https://img.shields.io/github/stars/nengo/nengo_extras.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_extras.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:tbekolay&#37;&#52;&#48;gmail&#46;com"><span>Trevor Bekolay</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo extras contains extra utilities and add-ons for Nengo.
+These utilities are helpful when you need them,
+but they’re not necessary for using Nengo,
+so we keep them separate to keep the Nengo core
+as small as possible.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong><a class="reference external" href="https://www.nengo.ai/README.html">Nengo documentation</a></strong><p class="project-badges"><a class="reference external" href="https://www.nengo.ai/README.html"><img alt="https://img.shields.io/badge/documentation--green.svg?style=social" src="https://img.shields.io/badge/documentation--green.svg?style=social" /></a><a class="reference external" href="https://github.com/nengo/nengo.github.io"><img alt="https://img.shields.io/github/stars/nengo/nengo.github.io.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo.github.io.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:tbekolay&#37;&#52;&#48;gmail&#46;com"><span>Trevor Bekolay</span></a></p>
+</div>
+<div class="project-description docutils container">
+You’re reading the Nengo documentation right now!
+It contains general information about
+projects in the Nengo ecosystem
+and how these projects are developed.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong><a class="reference external" href="https://www.nengo.ai/enhancement_proposals/">Enhancement proposals</a></strong><p class="project-badges"><a class="reference external" href="https://www.nengo.ai/enhancement_proposals/"><img alt="https://img.shields.io/badge/documentation--green.svg?style=social" src="https://img.shields.io/badge/documentation--green.svg?style=social" /></a><a class="reference external" href="https://github.com/nengo/enhancement_proposals"><img alt="https://img.shields.io/github/stars/nengo/enhancement_proposals.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/enhancement_proposals.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:tbekolay&#37;&#52;&#48;gmail&#46;com"><span>Trevor Bekolay</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo Enhancement Proposals (NEPs) are proposals
+that touch multiple projects in the Nengo ecosystem,
+or represent a large change to one important project.</div>
+</div>
+</div>
+<div class="section" id="visualizations-and-models">
+<h2>Visualizations and models<a class="headerlink" href="#visualizations-and-models" title="Permalink to this headline">¶</a></h2>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo GUI</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_gui"><img alt="https://img.shields.io/github/stars/nengo/nengo_gui.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_gui.svg?style=social&amp;label=Github" /></a><a class="reference external" href="https://pypi.python.org/pypi/nengo_gui"><img alt="https://img.shields.io/pypi/v/nengo_gui.svg" src="https://img.shields.io/pypi/v/nengo_gui.svg" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:terry&#46;stewart&#37;&#52;&#48;gmail&#46;com"><span>Terry Stewart</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo GUI is a web browser-based interactive
+model construction and visualization tool.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo SPA</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_spa"><img alt="https://img.shields.io/github/stars/nengo/nengo_spa.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_spa.svg?style=social&amp;label=Github" /></a><a class="reference external" href="https://pypi.python.org/pypi/nengo_spa"><img alt="https://img.shields.io/pypi/v/nengo_spa.svg" src="https://img.shields.io/pypi/v/nengo_spa.svg" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:jan&#37;&#52;&#48;hyper-world&#46;de"><span>Jan Gosmann</span></a></p>
+</div>
+<div class="project-description docutils container">
+The Semantic Pointer Architecture (SPA)
+uses Nengo to build large cognitive models.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo examples</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_examples"><img alt="https://img.shields.io/github/stars/nengo/nengo_examples.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_examples.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:tbekolay&#37;&#52;&#48;gmail&#46;com"><span>Trevor Bekolay</span></a></p>
+</div>
+<div class="project-description docutils container">
+An archive of Nengo examples.
+We’ve found that examples are the best way
+to learn about Nengo,
+so we curate a large collection of examples here
+for teaching purposes.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo benchmarks</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_benchmarks"><img alt="https://img.shields.io/github/stars/nengo/nengo_benchmarks.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_benchmarks.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:terry&#46;stewart&#37;&#52;&#48;gmail&#46;com"><span>Terry Stewart</span></a></p>
+</div>
+<div class="project-description docutils container">
+Models and utilities for benchmarking
+different Nengo versions and backends.</div>
+</div>
+</div>
+<div class="section" id="simulation-backends">
+<h2>Simulation backends<a class="headerlink" href="#simulation-backends" title="Permalink to this headline">¶</a></h2>
+<p>Models created with the Nengo core
+can be run on any backend.
+Each backend is designed for a particular use case,
+like a particular hardware or software platform,
+allowing the same model to be run
+faster or more accurately.</p>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo OpenCL</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_ocl"><img alt="https://img.shields.io/github/stars/nengo/nengo_ocl.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_ocl.svg?style=social&amp;label=Github" /></a><a class="reference external" href="https://pypi.python.org/pypi/nengo_ocl"><img alt="https://img.shields.io/pypi/v/nengo_ocl.svg" src="https://img.shields.io/pypi/v/nengo_ocl.svg" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:erichuns&#37;&#52;&#48;gmail&#46;com"><span>Eric Hunsberger</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo OpenCL uses the <a class="reference external" href="https://www.khronos.org/opencl/">OpenCL framework</a>
+to run Nengo models on GPUs and other platforms.
+Most models run significantly faster with Nengo OpenCL.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong><a class="reference external" href="http://nengo.github.io/nengo_dl/">Nengo DL</a></strong><p class="project-badges"><a class="reference external" href="http://nengo.github.io/nengo_dl/"><img alt="https://img.shields.io/badge/documentation--green.svg?style=social" src="https://img.shields.io/badge/documentation--green.svg?style=social" /></a><a class="reference external" href="https://github.com/nengo/nengo_dl"><img alt="https://img.shields.io/github/stars/nengo/nengo_dl.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_dl.svg?style=social&amp;label=Github" /></a><a class="reference external" href="https://pypi.python.org/pypi/nengo_dl"><img alt="https://img.shields.io/pypi/v/nengo_dl.svg" src="https://img.shields.io/pypi/v/nengo_dl.svg" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:dhrsmss&#37;&#52;&#48;gmail&#46;com"><span>Daniel Rasmussen</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo DL simulates Nengo models using
+the <a class="reference external" href="https://www.tensorflow.org/">TensorFlow</a> library
+to easily interact with deep learning networks,
+as well as use deep learning training procedures
+to optimize Nengo model parameters.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo SpiNNaker</strong><p class="project-badges"><a class="reference external" href="https://github.com/project-rig/nengo_spinnaker"><img alt="https://img.shields.io/github/stars/project-rig/nengo_spinnaker.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/project-rig/nengo_spinnaker.svg?style=social&amp;label=Github" /></a><a class="reference external" href="https://pypi.python.org/pypi/nengo_spinnaker"><img alt="https://img.shields.io/pypi/v/nengo_spinnaker.svg" src="https://img.shields.io/pypi/v/nengo_spinnaker.svg" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="mailto:andrew&#46;mundy&#37;&#52;&#48;ieee&#46;org"><span>Andrew Mundy</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo SpiNNaker simulates Nengo models using
+<a class="reference external" href="http://apt.cs.manchester.ac.uk/projects/SpiNNaker/">SpiNNaker</a>
+architecture and associated hardware.
+Models running on SpiNNaker always execute in real time.</div>
+</div>
+<div class="project docutils container">
+<div class="project-info docutils container">
+<strong>Nengo MPI</strong><p class="project-badges"><a class="reference external" href="https://github.com/nengo/nengo_mpi"><img alt="https://img.shields.io/github/stars/nengo/nengo_mpi.svg?style=social&amp;label=Github" src="https://img.shields.io/github/stars/nengo/nengo_mpi.svg?style=social&amp;label=Github" /></a></p>
+<p class="project-maintainer"><span>Maintainer: </span><a class="reference external" href="https://github.com/nengo"><img alt="Managed by Nengo team" height="16px" src="https://www.nengo.ai/design/_images/small-light.svg" /></a><a class="reference external" href="mailto:eric&#46;crawford&#37;&#52;&#48;mail&#46;mcgill&#46;ca"><span>Eric Crawford</span></a></p>
+</div>
+<div class="project-description docutils container">
+Nengo MPI simulates Nengo models using a
+C++ backend that uses <a class="reference external" href="https://www.open-mpi.org/">MPI</a>
+to parallelize the running of the model
+on large numbers of heterogeneous processing units.</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="download.html" title="previous chapter (use the left arrow)">Download</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="build-a-brain/index.html" title="next chapter (use the right arrow)">How to Build a Brain</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="build-a-brain/index.html" title="How to Build a Brain"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="download.html" title="Download"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Nengo 2017-11-23 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2016, Applied Brain Research. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

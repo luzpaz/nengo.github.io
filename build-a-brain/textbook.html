@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Using the book as a text &#8212; Nengo 2017-11-23 documentation</title>
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2017-11-23',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supplementary materials" href="supplementary.html" />
+    <link rel="prev" title="How to Build a Brain" href="index.html" />
+<link rel="stylesheet" type="text/css" href="../_static/custom.css">
+
+
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="supplementary.html" title="Supplementary materials"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="How to Build a Brain"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Nengo 2017-11-23 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">How to Build a Brain</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    ../index.html" class="text-logo">Nengo</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Nengo projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How to Build a Brain</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using the book as a text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supplementary.html">Supplementary materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#the-semantic-pointer-architecture-spa">The Semantic Pointer Architecture (SPA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#an-example">An example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#book-reviews">Book reviews</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../summerschool.html">2018 Nengo Summer School</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forum.nengo.ai">Forum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers.html">Developer guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About this website</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Docs</a></li>
+              
+                <li><a href="index.html">How to Build a Brain</a></li>
+              
+              <li>Using the book as a text</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="using-the-book-as-a-text">
+<h1>Using the book as a text<a class="headerlink" href="#using-the-book-as-a-text" title="Permalink to this headline">¶</a></h1>
+<p>Given the practical nature of much of the material in the book,
+it can be used quite successfully as a textbook
+for a course on cognitive or neural modelling.
+The material below will assist instructors in running such a course.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are looking for something specific
+(e.g. specific slides, images, code, etc.),
+please do not hesitate to contact
+<a class="reference external" href="mailto:celiasmith&#37;&#52;&#48;uwaterloo&#46;ca">Chris Eliasmith</a>.</p>
+</div>
+<div class="section" id="suggested-lecture-schedule">
+<h2>Suggested lecture schedule<a class="headerlink" href="#suggested-lecture-schedule" title="Permalink to this headline">¶</a></h2>
+<p>I’ve provided more lectures
+than I believe you can fit in a single term.
+However, this allows lecturers to
+add and remove topics as they see fit,
+or change the emphasis of a particular version of the course.
+I’m assuming that each lecture is
+3 hours (i.e. a typical week’s worth of material).</p>
+<table class="table table-bordered">
+<colgroup>
+<col width="15%" />
+<col width="21%" />
+<col width="38%" />
+<col width="26%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Lecture</th>
+<th class="head">Readings</th>
+<th class="head">Topics</th>
+<th class="head">Assignment</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Week 1</td>
+<td>Sections
+1.1 &amp; 1.2:
+The Science
+of Cognition</td>
+<td><ul class="first last simple">
+<li>A brief history
+of cognitive science</li>
+<li>Central features
+of the main approaches</li>
+</ul>
+</td>
+<td>Install and
+run Nengo</td>
+</tr>
+<tr class="row-odd"><td>Week 2</td>
+<td>Sections
+1.3 &amp; 1.4</td>
+<td><ul class="first last simple">
+<li>Challenges for
+cognitive science</li>
+<li>Overview of the approach
+in this course</li>
+</ul>
+</td>
+<td>Build a model of
+a single neuron</td>
+</tr>
+<tr class="row-even"><td>Week 3</td>
+<td>Sections
+2.2 &amp; 2.2.1</td>
+<td><ul class="first last simple">
+<li>An introduction to
+basic neurophysiology
+and anatomy</li>
+<li>Principle 1 of the NEF:
+representation</li>
+</ul>
+</td>
+<td>Build a model of
+1D representation</td>
+</tr>
+<tr class="row-odd"><td>Week 4</td>
+<td>Section 2.2.2</td>
+<td><ul class="first last simple">
+<li>Principle 2 of the NEF:
+computation</li>
+</ul>
+</td>
+<td>Build a model that
+computes linear
+and nonlinear
+functions of a
+single variable</td>
+</tr>
+<tr class="row-even"><td>Week 5</td>
+<td>Section 2.2.3</td>
+<td><ul class="first last simple">
+<li>Principle 3 of the NEF:
+dynamics</li>
+</ul>
+</td>
+<td>Build a model of
+a 1D integrator</td>
+</tr>
+<tr class="row-odd"><td>Week 6
+(optional)</td>
+<td>Section 2.6</td>
+<td><ul class="first last simple">
+<li>Levels of description in
+the behavioral sciences</li>
+</ul>
+</td>
+<td>Build a model
+at 3 levels
+of description</td>
+</tr>
+<tr class="row-even"><td>Week 7</td>
+<td>Sections
+3.1–3.4</td>
+<td><ul class="first last simple">
+<li>Overview of the semantic
+pointer hypothesis</li>
+<li>Distributed neural
+semantics</li>
+</ul>
+</td>
+<td>Build a model of
+2D (or higher-D)
+representation</td>
+</tr>
+<tr class="row-odd"><td>Week 8</td>
+<td>Sections
+3.5–3.7</td>
+<td><ul class="first last simple">
+<li>An introduction to
+visual semantics</li>
+<li>An introduction to
+motor semantics</li>
+</ul>
+</td>
+<td>Build a model of
+2D nonlinear
+computation
+(multiplication)</td>
+</tr>
+<tr class="row-even"><td>Week 9</td>
+<td>Sections
+4.1–4.4 &amp; 4.6</td>
+<td><ul class="first last simple">
+<li>Syntactic representations</li>
+<li>Vector symbolic
+architectures</li>
+<li>Implementations of VSAs
+in neurons</li>
+</ul>
+</td>
+<td>Build a binding
+neural network</td>
+</tr>
+<tr class="row-odd"><td>Week 10
+(optional)</td>
+<td>Sections
+4.5–4.7</td>
+<td><ul class="first last simple">
+<li>Learning syntactic
+manipulations</li>
+<li>Modeling fluid
+intelligence</li>
+<li>Syntax and semantics
+for structured concepts</li>
+</ul>
+</td>
+<td>Build a model
+that learns an
+unknown syntactic
+transformation</td>
+</tr>
+<tr class="row-even"><td>Week 11</td>
+<td>Sections
+5.1–5.3</td>
+<td><ul class="first last simple">
+<li>Basal ganglia
+anatomy and physiology</li>
+<li>Basal ganglia function</li>
+</ul>
+</td>
+<td>Build a basal
+ganglia model
+that selects
+among 5 actions</td>
+</tr>
+<tr class="row-odd"><td>Week 12</td>
+<td>Sections
+5.4, 5.6–5.8</td>
+<td><ul class="first last simple">
+<li>Basal ganglia use for
+flexible action selection</li>
+<li>Example uses of the basal
+ganglia model in the SPA</li>
+</ul>
+</td>
+<td>Build a question
+answering model
+with control</td>
+</tr>
+<tr class="row-even"><td>Week 13</td>
+<td>Sections
+6.1–6.3</td>
+<td><ul class="first last simple">
+<li>Introduction to cognition
+through time</li>
+<li>Working memory and
+serial working memory</li>
+</ul>
+</td>
+<td>Build a (serial)
+working memory
+model</td>
+</tr>
+<tr class="row-odd"><td>Week 14</td>
+<td>Sections
+6.4–6.6</td>
+<td><ul class="first last simple">
+<li>Spike-timing dependent
+plasticity (STDP)</li>
+<li>Reinforcement learning</li>
+<li>Learning transformations
+with the hPES rule</li>
+</ul>
+</td>
+<td>Build a network
+that learns an
+arbitrary 1D
+transformation</td>
+</tr>
+<tr class="row-even"><td>Week 15</td>
+<td>Sections
+7.1–7.3</td>
+<td><ul class="first last simple">
+<li>A review and overview
+of the SPA</li>
+<li>The Spaun model and tasks</li>
+</ul>
+</td>
+<td>Build a question
+answering model
+with control</td>
+</tr>
+<tr class="row-odd"><td>Week 16
+(optional)</td>
+<td>Section 7.4</td>
+<td><ul class="first last simple">
+<li>Probabilistic models</li>
+<li>Interpreting the SPA
+as a probabilistic model</li>
+</ul>
+</td>
+<td>Build a model
+to do a simple
+statistical
+inference problem</td>
+</tr>
+<tr class="row-even"><td>Week 17</td>
+<td>Chapter 8</td>
+<td><ul class="first last simple">
+<li>Evaluating cognitive
+theories</li>
+<li>Detailed discussion of the
+core cognitive criteria</li>
+</ul>
+</td>
+<td>Begin a course
+project, using
+tutorial 8
+as an example</td>
+</tr>
+<tr class="row-odd"><td>Week 18</td>
+<td>Chapter 9</td>
+<td><ul class="first last simple">
+<li>A survey of other
+approaches to cognitive
+modelling</li>
+<li>A comparison of the SPA
+with past approaches</li>
+</ul>
+</td>
+<td>Course project</td>
+</tr>
+<tr class="row-even"><td>Week 19</td>
+<td>Chapter 10</td>
+<td><ul class="first last simple">
+<li>Conceptual consequences of
+the SPA and NEF methods</li>
+<li>Future challenges for this
+and other approaches</li>
+</ul>
+</td>
+<td>Course project</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="assignment-details">
+<h2>Assignment details<a class="headerlink" href="#assignment-details" title="Permalink to this headline">¶</a></h2>
+<p>The assignments above mirror those in the book.
+It is also useful to ask questions
+about the functioning of the models being built,
+and to ask students to change the models slightly
+to examine different aspects of neural/cognitive processing.
+The intent of this section of the website
+is to provide examples of such questions,
+as we develop them.
+<a class="reference external" href="https://forum.nengo.ai/">Suggestions welcome</a>.</p>
+</div>
+<div class="section" id="suggested-projects">
+<h2>Suggested projects<a class="headerlink" href="#suggested-projects" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Build a creature to seek food and return to a home nest.</li>
+<li>Build a serial working memory model that allows for loading, reset, etc.</li>
+<li>Build a robot controller for a robot
+that you present instructions to,
+that it memorizes and then executes.</li>
+<li>Build an adaptive controller for a 3-link arm
+using Slotine’s adaptation methods.</li>
+<li>Build a model that does any one of the tasks in Spaun.</li>
+<li>Build something on the <a class="reference external" href="https://github.com/ctn-waterloo/modelling_ideas/issues">modelling ideas list</a>.</li>
+</ul>
+<p>If you have a project suggestions,
+please add it to the <a class="reference external" href="https://github.com/ctn-waterloo/modelling_ideas/issues">modelling ideas list</a>,
+or post it <a class="reference external" href="https://forum.nengo.ai/">on the forum</a>.</p>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="index.html" title="previous chapter (use the left arrow)">How to Build a Brain</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="supplementary.html" title="next chapter (use the right arrow)">Supplementary materials</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="supplementary.html" title="Supplementary materials"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="How to Build a Brain"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Nengo 2017-11-23 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >How to Build a Brain</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2016, Applied Brain Research. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Contributor guide &#8212; Nengo 2017-11-23 documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2017-11-23',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Nengo Code of Conduct" href="conduct.html" />
+    <link rel="prev" title="Governance" href="governance.html" />
+<link rel="stylesheet" type="text/css" href="_static/custom.css">
+
+
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="conduct.html" title="Nengo Code of Conduct"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="governance.html" title="Governance"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Nengo 2017-11-23 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" accesskey="U">Developer guide</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    index.html" class="text-logo">Nengo</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects.html">Nengo projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-a-brain/index.html">How to Build a Brain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summerschool.html">2018 Nengo Summer School</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://forum.nengo.ai">Forum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">User guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="developers.html">Developer guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="governance.html">Governance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributor guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reviewing.html">Reviewer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintaining.html">Maintainer guide</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="people.html">People</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">About this website</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+                <li><a href="developers.html">Developer guide</a></li>
+              
+              <li>Contributor guide</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="contributor-guide">
+<h1>Contributor guide<a class="headerlink" href="#contributor-guide" title="Permalink to this headline">¶</a></h1>
+<p>There are lots of ways to contribute to Nengo,
+including simply using it!
+If you want to get even more involved,
+then see the pages below for how to do so.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="conduct.html">Nengo Code of Conduct</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#why-have-a-code-of-conduct">Why have a code of conduct?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#social-rules">Social rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#time">Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#giving-feedback">Giving feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#receiving-feedback">Receiving feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#enactment">Enactment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conduct.html#notes">Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="how-to.html">Making Nengo contributions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to.html#sharing-your-creations">Sharing your creations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to.html#reporting-bugs-and-suggesting-features">Reporting bugs and suggesting features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to.html#proposing-a-large-change">Proposing a large change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to.html#making-pull-requests">Making pull requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Style guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="style.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#git">Git</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="caa.html">Nengo Contributor Assignment Agreement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="caa.html#individual-contributor-assignment-agreement">Individual Contributor Assignment Agreement</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="governance.html" title="previous chapter (use the left arrow)">Governance</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="conduct.html" title="next chapter (use the right arrow)">Nengo Code of Conduct</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="conduct.html" title="Nengo Code of Conduct"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="governance.html" title="Governance"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Nengo 2017-11-23 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="developers.html" >Developer guide</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2016, Applied Brain Research. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
